@@ -11,4 +11,11 @@
         class="springCore.ru.alishev.springCourse.ClassicalMusic">
     </bean>
 
+	<!-- внедрим зависимость с помощью spring framework
+		 внутрь этого бина уже будет внедрена зависимость musicBean -->
+	<bean id="musicPlayer"
+		  class="springCore.ru.alishev.springCourse.MusicPlayer">
+		  <constructor-arg ref="musicBean"></constructor-arg>
+		
+	</bean>
 </beans>
