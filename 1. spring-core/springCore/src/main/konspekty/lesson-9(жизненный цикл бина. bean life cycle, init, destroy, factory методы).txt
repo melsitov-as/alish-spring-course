@@ -1,0 +1,5 @@
+Репозиторий прошлого урока (Стартовый проект) - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson7.Scopes
+
+Репозиторий урока - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson8.InitDestroyAndFactory
+
+Статья про паттерн "Фабричный Метод" (Factory Method) - https://refactoring.guru/ru/design-patterns/factory-method
