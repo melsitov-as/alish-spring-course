@@ -1,0 +1,2 @@
+scope - singleton - используется по умолчанию
+scope - prototype - каждый раз создает новый объект при вызове getBean()

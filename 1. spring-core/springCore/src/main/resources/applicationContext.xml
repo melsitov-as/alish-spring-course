@@ -14,7 +14,8 @@
     </bean>
 
 	<bean id="musicPlayer"
-		  class="springCore.ru.alishev.springCourse.MusicPlayer">
+		  class="springCore.ru.alishev.springCourse.MusicPlayer"
+		  scope="prototype">
 		<!-- тэг назначает значение для сеттера -->
 		<property name="music" ref="musicBean"></property>
 		
