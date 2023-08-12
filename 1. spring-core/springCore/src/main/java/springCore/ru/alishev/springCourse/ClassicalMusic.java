@@ -1,5 +1,8 @@
 package springCore.ru.alishev.springCourse;
 
+import org.springframework.stereotype.Component;
+
+@Component("classicalMusic")
 public class ClassicalMusic implements Music {
 	private ClassicalMusic() {}
 	

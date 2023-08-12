@@ -9,25 +9,5 @@
         
     <context:property-placeholder location="classpath:musicPlayer.properties"></context:property-placeholder>
 
-    <bean id="musicBean"
-        class="springCore.ru.alishev.springCourse.ClassicalMusic"
-        init-method="doMyInit"
-        destroy-method="doMyDestroy"
-        factory-method="getClassicalMusic">
-    </bean>
-
-	<bean id="musicPlayer"
-		  class="springCore.ru.alishev.springCourse.MusicPlayer"
-		  scope="prototype">
-		<!-- тэг назначает значение для сеттера -->
-		<property name="music" ref="musicBean"></property>
-		
-		<!-- 
-		<property name="name" value="Some name"></property>
-		<property name="volume" value="50"></property>
-		-->
-		<property name="name" value="${musicPlayer.name}"></property>
-		<property name="volume" value="${musicPlayer.volume}"></property>
-		
-	</bean>
+    <context:component-scan base-package="springCore.ru.alishev.springCourse"></context:component-scan>
 </beans>
