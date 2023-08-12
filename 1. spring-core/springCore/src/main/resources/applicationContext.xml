@@ -6,16 +6,24 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+        
+    <context:property-placeholder location="classpath:musicPlayer.properties"></context:property-placeholder>
 
     <bean id="musicBean"
         class="springCore.ru.alishev.springCourse.ClassicalMusic">
     </bean>
 
-	<!-- внедрим зависимость с помощью spring framework
-		 внутрь этого бина уже будет внедрена зависимость musicBean -->
 	<bean id="musicPlayer"
 		  class="springCore.ru.alishev.springCourse.MusicPlayer">
-		  <constructor-arg ref="musicBean"></constructor-arg>
+		<!-- тэг назначает значение для сеттера -->
+		<property name="music" ref="musicBean"></property>
+		
+		<!-- 
+		<property name="name" value="Some name"></property>
+		<property name="volume" value="50"></property>
+		-->
+		<property name="name" value="${musicPlayer.name}"></property>
+		<property name="volume" value="${musicPlayer.volume}"></property>
 		
 	</bean>
 </beans>

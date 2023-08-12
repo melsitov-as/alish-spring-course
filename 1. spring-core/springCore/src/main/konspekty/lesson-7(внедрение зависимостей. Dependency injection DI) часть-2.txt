@@ -1,0 +1,4 @@
+Внедрение зависимостей через setter
+1. через метод setter
+
+Репозиторий с решением самостоятельной задачи - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson6.HWSolution
