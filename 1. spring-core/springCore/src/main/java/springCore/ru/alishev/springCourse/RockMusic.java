@@ -2,7 +2,7 @@ package springCore.ru.alishev.springCourse;
 
 import org.springframework.stereotype.Component;
 
-@Component("rockMusic")
+//@Component("rockMusic")
 public class RockMusic implements Music{
 
 	@Override

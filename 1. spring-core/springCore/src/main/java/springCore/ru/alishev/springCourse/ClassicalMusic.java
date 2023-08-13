@@ -1,10 +1,12 @@
 package springCore.ru.alishev.springCourse;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("classicalMusic")
+//@Component("classicalMusic")
+//@Scope("prototype")
 public class ClassicalMusic implements Music {
-	private ClassicalMusic() {}
+	ClassicalMusic() {}
 	
 	public static ClassicalMusic getClassicalMusic() {
 		return new ClassicalMusic();
