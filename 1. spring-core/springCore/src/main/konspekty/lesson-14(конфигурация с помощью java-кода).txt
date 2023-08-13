@@ -1,0 +1,33 @@
+Репозиторий прошлого урока (Стартовый проект) - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson12.SpringAnnotations4
+
+Репозиторий урока - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson13.SpringJavaConfiguration
+
+Репозиторий с решением самостоятельной задачи - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson13.HWSolution
+
+*************************************************************************************
+
+вместо xml-конфигурации будет java-класс с конфигурацией,
+но при этом
+
+для того, чтобы пометить java-класс, который мы хотим использовать для конфигурации
+используется аннотация @Configuration
+
+@Congfiguration
+public class SpringConfig {}
+
+Пустой конфигурационный класс java равен по функционалу пустому xml-файлу
+
+для каждого xml-тега в java-классе есть соответствующая аннотация
+
+Подробней об аннотации @Bean
+- по умолчанию у бинов scope-singleton
+- это значит, что тело @Bean методов по-умолчанию вызывается только один раз,
+а все последующие вызовы Spring прерывает и возвращет уже имеющийся бин из контекста
+
+Внедрение значений из внешнего файла
+
+вместо xml файла конфигурации есть:
+SpringConfig.java
+@Configuration
+@PropertySource("classpath:musicPlayer.properties")
+public class SpringConfig {}
