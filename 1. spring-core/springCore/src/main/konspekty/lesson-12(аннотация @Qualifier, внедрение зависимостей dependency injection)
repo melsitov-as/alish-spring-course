@@ -1,0 +1,25 @@
+Урок про Enum (Перечисления) - https://www.youtube.com/watch?v=GOzNp1YAm5w
+
+Репозиторий прошлого урока (Стартовый проект) - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson10.SpringAnnotations2
+
+Репозиторий урока - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson11.SpringAnnotations3
+
+Репозиторий с решением самостоятельной задачи - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson11.HWSolution
+
+Аннотация @Qualifier (уточнитель)
+@Qualifier("rockMusic")
+указываем id того бина, который хотим внедрить
+
+Когда внедрение производится через конструктор, для уточнения зависимостей
+необходимо использовать такой синтаксис:
+@Autowired
+public MusicPlayer(@Qualifier("rockMusic") Music music1, 
+				   @Qualifier("classicalMusic") Music music2) {
+				   
+	this.music1 = music1;
+	this.music2 = music2;
+	
+}
+
+Аннотацию @Qualifier необходимо использовать рядом с аргументами
+конструктора
