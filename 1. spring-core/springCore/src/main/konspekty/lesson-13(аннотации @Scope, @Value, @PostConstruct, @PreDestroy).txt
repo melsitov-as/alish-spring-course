@@ -1,0 +1,21 @@
+Репозиторий прошлого урока (Стартовый проект) - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson11.SpringAnnotations3
+
+Репозиторий урока - https://github.com/NeilAlishev/SpringCourse/tree/master/Lesson12.SpringAnnotations4
+
+Аннотация @Value
+@Value("${musicPlayer.name}"
+private String name;
+@Value("${musicPlayer.volume}"
+private int volume;
+
+Scope - область видимости бинов - задает то, как Spring будет создавать ваши бины (по умолчанию - Singleton) и есть Prototype
+
+С помощью аннотаций
+@Scope("singleton")
+@Scope("prototype")
+
+
+@PostConstruct - аннотирует init-метод
+@PreDestroy - помечает destroy-метод
+
+все тоже самое как и в xml файле
